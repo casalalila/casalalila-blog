@@ -1,13 +1,13 @@
 /* Casa Lalila · Blog
    Colores de la web: marrón #3E2723, lila #C0B4EB, mantequilla #F7EEC7, marrón cálido #744A43, hueso #F8F6ED.
-   Tipografías: Area Normal (títulos y textos), Jadeite (etiquetas y menú) y Citadel Script (solo un acento puntual).
+   Tipografías: Plus Jakarta Sans (títulos y textos), Jadeite (etiquetas y menú) y Citadel Script (solo un acento puntual).
    Los .woff2 están en /fuentes/ (convertidos desde los archivos de la marca), sin llamadas a Google. */
 
-@font-face { font-family: "Area Normal"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/area-400.woff2") format("woff2"); }
-@font-face { font-family: "Area Normal"; font-weight: 400; font-style: italic; font-display: swap; src: url("/fuentes/area-400i.woff2") format("woff2"); }
-@font-face { font-family: "Area Normal"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fuentes/area-600.woff2") format("woff2"); }
-@font-face { font-family: "Area Normal"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fuentes/area-700.woff2") format("woff2"); }
-@font-face { font-family: "Area Normal"; font-weight: 800; font-style: normal; font-display: swap; src: url("/fuentes/area-800.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-400.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 400; font-style: italic; font-display: swap; src: url("/fuentes/jakarta-400i.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-600.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-700.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 800; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-800.woff2") format("woff2"); }
 @font-face { font-family: "Jadeite"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/jadeite-400.woff2") format("woff2"); }
 @font-face { font-family: "Jadeite Rough"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/jadeite-rough-400.woff2") format("woff2"); }
 @font-face { font-family: "Citadel Script"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/citadel-400.woff2") format("woff2"); }
@@ -20,8 +20,8 @@
   --mantequilla: #F7EEC7;
   --hueso: #F8F6ED;
   --borde: #e3d9ae;
-  --titulos: "Area Normal", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --texto: "Area Normal", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --titulos: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --texto: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --etiquetas: "Jadeite", Georgia, "Times New Roman", serif;
   --manuscrita: "Citadel Script", "Snell Roundhand", cursive;
 }
@@ -92,7 +92,7 @@ a:hover { text-decoration-color: var(--marron); }
 .migas a { color: var(--marron-calido); }
 .entrada-cabecera { padding: 1.4rem 0 1.4rem; }
 .entrada-cabecera .meta { font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--marron-calido); margin: 0 0 1rem; }
-.entrada-cabecera h1 { font-family: var(--titulos); font-weight: 800; font-size: clamp(2rem, 5.4vw, 2.9rem); line-height: 1.1; margin: 0; letter-spacing: -.01em; }
+.entrada-cabecera h1 { font-family: var(--titulos); font-weight: 800; font-size: clamp(2rem, 5.4vw, 2.9rem); line-height: 1.12; margin: 0; letter-spacing: 0; }
 
 .contenido h2 { font-family: var(--titulos); font-weight: 700; font-size: 1.75rem; line-height: 1.2; margin: 2.7rem 0 .8rem; }
 .contenido h3 { font-family: var(--texto); font-weight: 700; font-size: 1.02rem; margin: 1.8rem 0 .4rem; }
