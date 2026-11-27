@@ -1,6 +1,6 @@
 /* Casa Lalila · Blog
    Colores de la web: marrón #3E2723, lila #C0B4EB, mantequilla #F7EEC7, marrón cálido #744A43, hueso #F8F6ED.
-   Tipografías: Plus Jakarta Sans (títulos y textos), Jadeite (etiquetas y menú) y Citadel Script (solo un acento puntual).
+   Tipografías: Plus Jakarta Sans (títulos y textos), Shippori Antique B1 (etiquetas y menú, siempre en mayúsculas y con espaciado) y Pinyon Script (solo un acento puntual).
    Los .woff2 están en /fuentes/ (convertidos desde los archivos de la marca), sin llamadas a Google. */
 
 @font-face { font-family: "Plus Jakarta Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-400.woff2") format("woff2"); }
@@ -8,9 +8,8 @@
 @font-face { font-family: "Plus Jakarta Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-600.woff2") format("woff2"); }
 @font-face { font-family: "Plus Jakarta Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-700.woff2") format("woff2"); }
 @font-face { font-family: "Plus Jakarta Sans"; font-weight: 800; font-style: normal; font-display: swap; src: url("/fuentes/jakarta-800.woff2") format("woff2"); }
-@font-face { font-family: "Jadeite"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/jadeite-400.woff2") format("woff2"); }
-@font-face { font-family: "Jadeite Rough"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/jadeite-rough-400.woff2") format("woff2"); }
-@font-face { font-family: "Citadel Script"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/citadel-400.woff2") format("woff2"); }
+@font-face { font-family: "Shippori Antique B1"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/shippori-400.woff2") format("woff2"); }
+@font-face { font-family: "Pinyon Script"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fuentes/pinyon-400.woff2") format("woff2"); }
 
 :root {
   --marron: #3E2723;
@@ -22,8 +21,8 @@
   --borde: #e3d9ae;
   --titulos: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --texto: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --etiquetas: "Jadeite", Georgia, "Times New Roman", serif;
-  --manuscrita: "Citadel Script", "Snell Roundhand", cursive;
+  --etiquetas: "Shippori Antique B1", Georgia, "Times New Roman", serif;
+  --manuscrita: "Pinyon Script", "Snell Roundhand", cursive;
 }
 
 * { box-sizing: border-box; }
@@ -62,9 +61,9 @@ a:hover { text-decoration-color: var(--marron); }
 
 /* Portada del blog */
 .intro { padding: 2rem 0 1.8rem; text-align: center; }
-.etiqueta { font-family: "Jadeite Rough", "Jadeite", Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 4.6vw, 2.15rem); line-height: 1.1; letter-spacing: .12em; text-transform: uppercase; color: var(--marron-calido); margin: 0; position: relative; z-index: 1; }
+.etiqueta { font-family: var(--etiquetas); font-weight: 400; font-size: clamp(1.35rem, 4.6vw, 2.15rem); line-height: 1.1; letter-spacing: .12em; text-transform: uppercase; color: var(--marron-calido); margin: 0; position: relative; z-index: 1; }
 .intro h1 { margin: 0 0 1.6rem; font-weight: 400; line-height: 1; }
-.intro h1 .manuscrita { display: block; font-family: var(--manuscrita); font-size: clamp(2.5rem, 11.5vw, 6.4rem); line-height: 1.1; margin-top: -.25em; position: relative; z-index: 2; transform: translateX(-.1em); }
+.intro h1 .manuscrita { display: block; font-family: var(--manuscrita); font-size: clamp(2.5rem, 11.5vw, 6.4rem); line-height: 1.15; margin-top: .05em; position: relative; z-index: 2; }
 .intro p { margin: 0 auto; color: var(--marron-calido); max-width: 32em; }
 
 .lista { list-style: none; padding: 0; margin: 1.8rem 0 3rem; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; }
@@ -76,7 +75,7 @@ a:hover { text-decoration-color: var(--marron); }
 .lista p { margin: 0 0 .9rem; color: var(--marron-calido); font-size: .88rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .lista .leer { margin-top: auto; }
 .lista .chip { align-self: flex-start; }
-.lista .meta { font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; color: var(--marron-calido); margin: 0 0 .5rem; }
+.lista .meta { font-size: .66rem; letter-spacing: .05em; text-transform: uppercase; color: var(--marron-calido); margin: 0 0 .5rem; }
 .leer { font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
 
 /* Imágenes */
@@ -142,7 +141,7 @@ a:hover { text-decoration-color: var(--marron); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Jadeite: menú, etiquetas, fechas y botones */
+/* Shippori: menú, etiquetas, fechas y botones (siempre mayúsculas con espaciado) */
 .menu,
 .chip,
 .lista .meta,
@@ -150,4 +149,4 @@ a:hover { text-decoration-color: var(--marron); }
 .migas,
 .entrada-cabecera .meta,
 .boton,
-.pie nav { font-family: var(--etiquetas); font-weight: 400; }
+.pie nav { font-family: var(--etiquetas); font-weight: 400; text-transform: uppercase; letter-spacing: .12em; }
